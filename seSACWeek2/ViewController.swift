@@ -18,12 +18,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var boredLabel: UILabel!
     @IBOutlet weak var offendLabel: UILabel!
     @IBOutlet weak var tearsLabel: UILabel!
+
+    
     
     var happyCount = 0, loveCount = 0, likeCount = 0, panicCount = 0, sadCount = 0, depressedCount = 0, boredCount = 0 , offendCount  = 0, tearsCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        showAlertController()
+//        happyLabel.text = setUserNickname()
+    }
+    
+    func setUserNickname() -> String {
+        let nickname = ["hi", "아", "aa"]
+        let select = nickname.randomElement()!
         
+        
+        return "\(select)"
+    }
+    
+    func example() -> (UIColor, String, String) {
+        let color: [UIColor] = [.yellow, .orange, .blue, .white]
+        let image: [String] = ["sesac_slime1", "sesac_slime2", "sesac_slime3", "sesac_slime4"]
+        
+        return (color.randomElement()!, "고래밥", image.randomElement()!)
+    }
+    
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        print(sender.currentImage)
     }
     
     @IBAction func happyButtonClicked(_ sender: UIButton) {
@@ -69,6 +91,26 @@ class ViewController: UIViewController {
     @IBAction func tearsButtonClicked(_ sender: UIButton) {
         tearsCount += 1
         tearsLabel.text = "슬퍼해 \(tearsCount)"
+    }
+    
+    func showAlertController() {
+//    1. 흰 바탕: UIAlertController
+        let alert = UIAlertController(title: "타이틀", message: "여기는 메시지가 들어갑니다", preferredStyle: .actionSheet)
+        
+//        2.버튼
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        let web = UIAlertAction(title: "열기", style: .cancel, handler: nil)
+        let copy = UIAlertAction(title: "복사", style: .default, handler: nil)
+
+//        3. 1+2
+        alert.addAction(copy)
+        alert.addAction(web)
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+//        4. present
+        present(alert, animated: true, completion: nil)
     }
     
 }
