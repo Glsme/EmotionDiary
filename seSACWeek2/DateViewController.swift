@@ -15,6 +15,18 @@ class DateViewController: UIViewController {
         super.viewDidLoad()
         
         makeDateImageViewUI()
+        
+        // yyyy MM dd hh:mm:ss
+        let format = DateFormatter()
+        format.dateFormat = "M월 d일 yy년"
+        
+        let result = format.string(from: Date() )
+        print(result)
+        
+//        let word = "3월 2일, 19년"
+//        let dateResult = format.date(from: word)
+//
+//        print(dateResult)
 
     }
     
@@ -26,5 +38,20 @@ class DateViewController: UIViewController {
     
     func makeImageViewUI(_ imageView: UIImageView) {
         imageView.layer.cornerRadius = 10
+    }
+    
+    @IBAction func userDatePickerChanged(_ sender: UIDatePicker) {
+        let swiftDatePickerView = sender
+        
+        let dateFormat: DateFormatter = {
+            let f = DateFormatter()
+            f.dateStyle = .long
+            f.timeStyle = .short
+            f.locale = Locale(identifier: "Ko_kr")
+            
+            return f
+        }()
+        
+        print(dateFormat.string(from: swiftDatePickerView.date))
     }
 }
