@@ -49,6 +49,12 @@ class DateViewController: UIViewController {
         return f
     }()
     
+    
+    let after100Days = Date()
+    let after200Days = Date()
+    let after300Days = Date()
+    let after400Days = Date()
+    
     // Date Picker value changed
     @IBAction func userDatePickerChanged(_ sender: UIDatePicker) {
 //        print(dateFormat.string(from: swiftDatePickerView.date))
@@ -67,9 +73,6 @@ class DateViewController: UIViewController {
         printDateLabelUI(dateFormat: dateFormat, targetDay: after200Days, label: after200DaysLabel)
         printDateLabelUI(dateFormat: dateFormat, targetDay: after300Days, label: after300DaysLabel)
         printDateLabelUI(dateFormat: dateFormat, targetDay: after400Days, label: after400DaysLabel)
-
-
-        
     }
     
     // label에 날짜 계산하여 넣는 함수
@@ -80,5 +83,12 @@ class DateViewController: UIViewController {
     // 날짜 계산 함수
     func calculateDate(date: Int) -> Date {
         return datePickerValue.calendar.date(byAdding: .day, value: date, to: datePickerValue.date)!
+    }
+    
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
+        UserDefaults.standard.set(after100Days, forKey: "after100Days")
+        UserDefaults.standard.set(after200Days, forKey: "after200Days")
+        UserDefaults.standard.set(after300Days, forKey: "after300Days")
+        UserDefaults.standard.set(after400Days, forKey: "after400Days")
     }
 }
