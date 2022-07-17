@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85378F1D2880E84F006CD00C /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85378F1C2880E84F006CD00C /* Transition.storyboard */; };
+		85378F1F2880EFD1006CD00C /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85378F1E2880EFD1006CD00C /* TransitionFirstViewController.swift */; };
+		85378F212880FDFD006CD00C /* TransitionSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85378F202880FDFD006CD00C /* TransitionSecondViewController.swift */; };
 		855A14D8287E98F1003A95F9 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A14D7287E98F1003A95F9 /* DateViewController.swift */; };
 		855D9581287BA3FA00A5591F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D9580287BA3FA00A5591F /* AppDelegate.swift */; };
 		855D9583287BA3FA00A5591F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D9582287BA3FA00A5591F /* SceneDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85378F1C2880E84F006CD00C /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
+		85378F1E2880EFD1006CD00C /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
+		85378F202880FDFD006CD00C /* TransitionSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionSecondViewController.swift; sourceTree = "<group>"; };
 		855A14D7287E98F1003A95F9 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		855D957D287BA3FA00A5591F /* seSACWeek2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seSACWeek2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855D9580287BA3FA00A5591F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,9 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85378F1B2880E835006CD00C /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				85378F1C2880E84F006CD00C /* Transition.storyboard */,
+				85378F1E2880EFD1006CD00C /* TransitionFirstViewController.swift */,
+				85378F202880FDFD006CD00C /* TransitionSecondViewController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		855D9574287BA3FA00A5591F = {
 			isa = PBXGroup;
 			children = (
+				85378F1B2880E835006CD00C /* Transition */,
 				855D957F287BA3FA00A5591F /* seSACWeek2 */,
 				855D957E287BA3FA00A5591F /* Products */,
 			);
@@ -155,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				855D958D287BA3FB00A5591F /* LaunchScreen.storyboard in Resources */,
+				85378F1D2880E84F006CD00C /* Transition.storyboard in Resources */,
 				855D958A287BA3FB00A5591F /* Assets.xcassets in Resources */,
 				855D9588287BA3FA00A5591F /* Main.storyboard in Resources */,
 				857824DD287FA6A100E1D192 /* Setting.storyboard in Resources */,
@@ -170,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				855A14D8287E98F1003A95F9 /* DateViewController.swift in Sources */,
+				85378F1F2880EFD1006CD00C /* TransitionFirstViewController.swift in Sources */,
 				855D9585287BA3FA00A5591F /* ViewController.swift in Sources */,
+				85378F212880FDFD006CD00C /* TransitionSecondViewController.swift in Sources */,
 				855D9581287BA3FA00A5591F /* AppDelegate.swift in Sources */,
 				855D9583287BA3FA00A5591F /* SceneDelegate.swift in Sources */,
 			);

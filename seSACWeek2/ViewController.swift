@@ -60,40 +60,40 @@ class ViewController: UIViewController {
         
     }
 
-//    func setUserNickname() -> String {
-//        let nickname = ["hi", "아", "aa"]
-//        let select = nickname.randomElement()!
-//
-//
-//        return "\(select)"
-//    }
-//
-//    func example() -> (UIColor, String, String) {
-//        let color: [UIColor] = [.yellow, .orange, .blue, .white]
-//        let image: [String] = ["sesac_slime1", "sesac_slime2", "sesac_slime3", "sesac_slime4"]
-//
-//        return (color.randomElement()!, "고래밥", image.randomElement()!)
-//    }
-//
-//    func showAlertController() {
-////    1. 흰 바탕: UIAlertController
-//        let alert = UIAlertController(title: "타이틀", message: "여기는 메시지가 들어갑니다", preferredStyle: .actionSheet)
-//
-////        2.버튼
-//        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-//        let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
-//        let web = UIAlertAction(title: "열기", style: .cancel, handler: nil)
-//        let copy = UIAlertAction(title: "복사", style: .default, handler: nil)
-//
-////        3. 1+2
-//        alert.addAction(copy)
-//        alert.addAction(web)
-//        alert.addAction(cancel)
-//        alert.addAction(ok)
-//
-////        4. present
-//        present(alert, animated: true, completion: nil)
-//    }
+    func setUserNickname() -> String {
+        let nickname = ["hi", "아", "aa"]
+        let select = nickname.randomElement()!
+
+
+        return "\(select)"
+    }
+
+    func example() -> (UIColor, String, String) {
+        let color: [UIColor] = [.yellow, .orange, .blue, .white]
+        let image: [String] = ["sesac_slime1", "sesac_slime2", "sesac_slime3", "sesac_slime4"]
+
+        return (color.randomElement()!, "고래밥", image.randomElement()!)
+    }
+
+    func showAlertController() {
+//    1. 흰 바탕: UIAlertController
+        let alert = UIAlertController(title: "타이틀", message: "여기는 메시지가 들어갑니다", preferredStyle: .alert)
+
+//        2.버튼
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        let web = UIAlertAction(title: "열기", style: .cancel, handler: nil)
+        let copy = UIAlertAction(title: "복사", style: .default, handler: nil)
+
+//        3. 1+2
+        alert.addAction(copy)
+        alert.addAction(web)
+        alert.addAction(cancel)
+        alert.addAction(ok)
+
+//        4. present
+        present(alert, animated: true, completion: nil)
+    }
     
 }
 

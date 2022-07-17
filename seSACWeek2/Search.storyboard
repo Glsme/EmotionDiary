@@ -168,6 +168,9 @@
         <designable name="Pb2-Aw-rdb">
             <size key="intrinsicContentSize" width="153" height="34"/>
         </designable>
+        <designable name="bad-2D-D1T">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="irU-QY-fJD"/>
