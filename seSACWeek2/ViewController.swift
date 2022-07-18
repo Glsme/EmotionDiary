@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var buttonLabels: [UILabel]!
-    var countArray = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var countArray = Array(repeating: 0, count: 9)
     
     override func viewDidLoad() {
         super.viewDidLoad()

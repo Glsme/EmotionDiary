@@ -90,5 +90,7 @@ class DateViewController: UIViewController {
         UserDefaults.standard.set(after200Days, forKey: "after200Days")
         UserDefaults.standard.set(after300Days, forKey: "after300Days")
         UserDefaults.standard.set(after400Days, forKey: "after400Days")
+        
+        print("날짜가 저장되었습니다.")
     }
 }
