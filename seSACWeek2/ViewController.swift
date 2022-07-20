@@ -62,10 +62,10 @@ class ViewController: UIViewController {
 
     func setUserNickname() -> String {
         let nickname = ["hi", "아", "aa"]
-        let select = nickname.randomElement()!
+        let select = "\(nickname.randomElement()!)"
 
 
-        return "\(select)"
+        return select
     }
 
     func example() -> (UIColor, String, String) {
