@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var buttonLabels: [UILabel]!
     var countArray = Array(repeating: 0, count: 9)
+    let emotionArray = ["행복해", "사랑해", "좋아해", "당황해", "속상해", "우울해", "심심해", "행복해", "슬퍼해"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,40 +25,8 @@ class ViewController: UIViewController {
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         print(sender.tag)
-        
-        switch sender.tag {
-        case 0:
-            countArray[0] += 1
-            buttonLabels[0].text = "행복해 \(countArray[0])"
-        case 1:
-            countArray[1] += 1
-            buttonLabels[1].text = "사랑해 \(countArray[1])"
-        case 2:
-            countArray[2] += 1
-            buttonLabels[2].text = "좋아해 \(countArray[2])"
-        case 3:
-            countArray[3] += 1
-            buttonLabels[3].text = "당황해 \(countArray[3])"
-        case 4:
-            countArray[4] += 1
-            buttonLabels[4].text = "속상해 \(countArray[4])"
-        case 5:
-            countArray[5] += 1
-            buttonLabels[5].text = "우울해 \(countArray[5])"
-        case 6:
-            countArray[6] += 1
-            buttonLabels[6].text = "심심해 \(countArray[6])"
-        case 7:
-            countArray[7] += 1
-            buttonLabels[7].text = "행복해 \(countArray[7])"
-        case 8:
-            countArray[8] += 1
-            buttonLabels[8].text = "슬퍼해 \(countArray[8])"
-        
-        default:
-            break
-        }
-        
+        countArray[sender.tag] += 1
+        buttonLabels[sender.tag].text = "\(emotionArray[sender.tag])" + "\(countArray[sender.tag])"
     }
 
     func setUserNickname() -> String {
